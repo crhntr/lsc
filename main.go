@@ -38,7 +38,7 @@ func main() {
 			log.Println(err)
 			return nil
 		}
-		if strings.HasSuffix(fileName, ".git") {
+		if strings.HasSuffix(fileName, ".git") || strings.HasSuffix(fileName, "node_modules") {
 			return filepath.SkipDir
 		}
 		if info.IsDir() {
